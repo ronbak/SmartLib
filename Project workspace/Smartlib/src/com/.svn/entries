@@ -1,0 +1,31 @@
+10
+
+dir
+59
+http://192.168.1.251:81/svn/idea2015/autoid/smartlibrary/src/com
+http://192.168.1.251:81/svn/idea2015
+
+
+
+2015-03-20T12:30:44.750000Z
+59
+autoid
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+301d324a-eb1a-344a-ac2a-9620bd7d89f8
+
+lib
+dir
+

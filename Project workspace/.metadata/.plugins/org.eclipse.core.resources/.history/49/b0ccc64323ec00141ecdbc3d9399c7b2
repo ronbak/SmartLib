@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<%@page import="java.sql.Connection"%>
+<%@page import="com.test.util.ConnectionUtil"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.util.ArrayList"%>
+<vxml version="2.1">
+<form>
+<block >
+<%String name=(String)session.getAttribute("name"); %>
+<prompt>hello<break time="small"/> <%=name %>.<break time="small"/>You have logged in successfully<break time="small"/> </prompt>
+ <%Connection con=ConnectionUtil.openConnection();
+ Statement st=con.createStatement();
+ String Rby=(String)session.getAttribute("u_num");
+ String query="select count(*) from Book_details where reserved_by="+Rby+"";
+
+ ResultSet rs=st.executeQuery(query);
+ if(rs.next())
+ {
+	int i=rs.getInt(1); 
+      if(i>=2){
+%> 
+<prompt> WARNING YOU HAVE ALREADY TAKEN TWO BOOKS . YOU CAN CONTINUE THIS CALL,But you need to return books on your visit to library </prompt>    	  
+ <%    }
+    	 
+ }
+ ConnectionUtil.closeConnection(rs,st,con);
+  %>
+  
+</block>
+<block>
+<submit next="category.jsp"/>
+</block>
+</form>
+</vxml>

@@ -1,0 +1,279 @@
+package com.lib;
+importjava.awt.event.ActionEvent;
+importjava.awt.event.ActionListener;
+importjava.util.ArrayList;
+
+importjavax.swing.ButtonGroup;
+importjavax.swing.ComboBoxModel;
+importjavax.swing.DefaultComboBoxModel;
+importjavax.swing.JButton;
+importjavax.swing.JComboBox;
+importjavax.swing.JFormattedTextField;
+importjavax.swing.JLabel;
+importjavax.swing.JOptionPane;
+importjavax.swing.JPanel;
+importjavax.swing.JPasswordField;
+importjavax.swing.JRadioButton;
+importjavax.swing.JRadioButtonMenuItem;
+importjavax.swing.JScrollBar;
+importjavax.swing.JScrollPane;
+importjavax.swing.JSlider;
+importjavax.swing.JTextArea;
+importjavax.swing.JTextField;
+
+importjavax.swing.WindowConstants;
+importjavax.swing.SwingUtilities;
+importjavax.swing.text.MaskFormatter;
+
+
+/**
+* This code was edited or generated using CloudGarden'sJigloo
+* SWT/Swing GUI Builder, which is free for non-commercial
+* use. If Jigloo is being used commercially (ie, by a corporation,
+* company or business for any purpose whatever) then you
+* should purchase a license for each developer using Jigloo.
+* Please visit www.cloudgarden.com for details.
+* Use of Jigloo implies acceptance of these licensing terms.
+* A COMMERCIAL LICENSE HAS NOT BEEN PURCHASED FOR
+* THIS MACHINE, SO JIGLOO OR THIS CODE CANNOT BE USED
+* LEGALLY FOR ANY CORPORATE OR COMMERCIAL PURPOSE.
+*/
+publicclassRegistrationextendsjavax.swing.JFrame {
+	privateJLabeljLabel1;
+	privateJLabeljLabel2;
+	privateJLabeljLabel3;
+	privateJLabeljLabel4;
+	privateJLabeljLabel5;
+	privateJLabeljLabel11;
+	privateJComboBoxjComboBox1;
+	privateJLabeljLabel10;
+	privateJTextFieldjTextField3;
+	privateJScrollPanejScrollPane1;
+	privateJTextAreajTextArea1;
+	privateJFormattedTextFieldjFormattedTextField3;
+	privateJRadioButtonjRadioButton2;
+	privateJRadioButtonjRadioButton1;
+	privateJFormattedTextFieldjFormattedTextField2;
+	privateJTextFieldjTextField2;
+	privateJButtonjButton1;
+	privateJFormattedTextFieldjFormattedTextField1;
+	privateJTextFieldjTextField1;
+	privateJLabeljLabel9;
+	privateJLabeljLabel8;
+	privateJLabeljLabel7;
+	privateJLabeljLabel6;
+
+	/**
+	* Auto-generated main method to display this JFrame
+	*/
+	publicstaticvoid main(String[] args) {
+		SwingUtilities.invokeLater(new Runnable() {
+			publicvoid run() {
+				Registration inst = new Registration();
+				inst.setLocationRelativeTo(null);
+				inst.setVisible(true);
+			}
+		});
+	}
+	
+	public Registration() {
+		super();
+		initGUI();
+	}
+	
+	privatevoidinitGUI() {
+		try {
+			setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+			getContentPane().setLayout(null);
+			{
+				jLabel1 = newJLabel();
+				getContentPane().add(jLabel1);
+				jLabel1.setText("User Registration");
+				jLabel1.setBounds(342, 34, 200, 28);
+				jLabel1.setFont(newjava.awt.Font("Monotype Corsiva",0,24));
+			}
+			{
+				jLabel2 = newJLabel();
+				getContentPane().add(jLabel2);
+				jLabel2.setText("Name");
+				jLabel2.setBounds(72, 107, 37, 16);
+			}
+			{
+				jLabel3 = newJLabel();
+				getContentPane().add(jLabel3);
+				jLabel3.setText("Password");
+				jLabel3.setBounds(72, 148, 94, 16);
+			}
+			{
+				jLabel4 = newJLabel();
+				getContentPane().add(jLabel4);
+				jLabel4.setText("Number");
+				jLabel4.setBounds(72, 187, 56, 16);
+			}
+			{
+				jLabel5 = newJLabel();
+				getContentPane().add(jLabel5);
+				jLabel5.setText("Emailid");
+				jLabel5.setBounds(72, 230, 67, 16);
+			}
+			{
+				jLabel6 = newJLabel();
+				getContentPane().add(jLabel6);
+				jLabel6.setText("DOB");
+				jLabel6.setBounds(72, 271, 56, 16);
+			}
+			{
+				jLabel7 = newJLabel();
+				getContentPane().add(jLabel7);
+				jLabel7.setText("Gender");
+				jLabel7.setBounds(72, 310, 94, 16);
+			}
+			{
+				jLabel8 = newJLabel();
+				getContentPane().add(jLabel8);
+				jLabel8.setText("Date of Registration");
+				jLabel8.setBounds(72, 351, 130, 16);
+			}
+			{
+				jLabel9 = newJLabel();
+				getContentPane().add(jLabel9);
+				jLabel9.setText("Address");
+				jLabel9.setBounds(72, 449, 56, 16);
+			}
+			{
+				jTextField1 = newJTextField();
+				getContentPane().add(jTextField1);
+				jTextField1.setBounds(266, 104, 204, 19);
+			}
+			{
+				MaskFormatter form1 = newMaskFormatter("##########");
+				jFormattedTextField1 = newJFormattedTextField(form1);
+				getContentPane().add(jFormattedTextField1);
+				jFormattedTextField1.setBounds(266, 184, 204, 23);
+			}
+			{
+				jTextField2 = newJTextField();
+				getContentPane().add(jTextField2);
+				jTextField2.setBounds(266, 227, 204, 23);
+			}
+			{
+				MaskFormatter form = newMaskFormatter("##/##/####");
+				jFormattedTextField2 = newJFormattedTextField(form);
+				getContentPane().add(jFormattedTextField2);
+				jFormattedTextField2.setBounds(266, 268, 204, 23);
+			}
+			{
+				
+				jRadioButton1 = newJRadioButton();
+				getContentPane().add(jRadioButton1);
+				jRadioButton1.setText("Male");
+				jRadioButton1.setBounds(266, 308, 76, 20);
+			
+				jRadioButton2 = newJRadioButton();
+				getContentPane().add(jRadioButton2);
+				jRadioButton2.setText("Female");
+				jRadioButton2.setBounds(353, 308, 93, 20);
+			
+				ButtonGroup g= newButtonGroup();
+				g.add(jRadioButton1);
+				g.add(jRadioButton2);
+			
+			}
+			{
+				MaskFormatter form2 = newMaskFormatter("##/##/####");
+				jFormattedTextField3 = newJFormattedTextField(form2);
+				getContentPane().add(jFormattedTextField3);
+				jFormattedTextField3.setBounds(266, 348, 204, 23);
+			}
+			{
+				jButton1 = newJButton();
+				getContentPane().add(jButton1);
+				jButton1.setText("Submit");
+				jButton1.setBounds(266, 578, 232, 50);
+				jButton1.addActionListener(newActionListener() {
+					publicvoidactionPerformed(ActionEventevt) {
+						jButton1ActionPerformed(evt);
+					}
+				});
+
+			}
+			{
+				jScrollPane1 = newJScrollPane();
+				getContentPane().add(jScrollPane1);
+				jScrollPane1.setBounds(266, 449, 207, 65);
+				{
+					jTextArea1 = newJTextArea();
+					jScrollPane1.setViewportView(jTextArea1);
+					jTextArea1.setBounds(512, 455, 204, 62);
+				}
+			}
+			{
+				jTextField3 = newJTextField();
+				getContentPane().add(jTextField3);
+				jTextField3.setBounds(266, 145, 204, 23);
+			}
+			{
+				jLabel10 = newJLabel();
+				getContentPane().add(jLabel10);
+				jLabel10.setText("Location");
+				jLabel10.setBounds(72, 392, 61, 26);
+			}
+			{
+				ArrayList al=Dbcon.getLocation();
+				ComboBoxModel jComboBox1Model = 
+					newDefaultComboBoxModel(al.toArray());
+				jComboBox1 = newJComboBox();
+				getContentPane().add(jComboBox1);
+				jComboBox1.setModel(jComboBox1Model);
+				jComboBox1.setBounds(266, 394, 100, 23);
+			}
+			{
+				jLabel11 = newJLabel();
+				getContentPane().add(jLabel11);
+				jLabel11.setText("(Password should contain only numbers)");
+				jLabel11.setBounds(482, 148, 334, 16);
+			}
+			pack();
+			this.setSize(1600, 700);
+		} catch (Exception e) {
+		//add your error handling code here
+			e.printStackTrace();
+		}
+	}
+	
+	privatevoid jButton1ActionPerformed(ActionEventevt) {
+		System.out.println("jButton1.actionPerformed, event="+evt);
+		//TODO add your code for jButton1.actionPerformed
+		String name=jTextField1.getText();
+	    String pass= jTextField3.getText();
+	int password=Integer.parseInt(pass);
+	    String num=jFormattedTextField1.getText();
+	    String emailid= jTextField2.getText();
+	    String dob=jFormattedTextField2.getText();
+	    String dateofreg = jFormattedTextField3.getText();
+	    String address= jTextArea1.getText();
+	    String gender = null;
+	if(jRadioButton1.isSelected()==true)
+	    {
+		gender=jRadioButton1.getText();
+	    }
+	elseif(jRadioButton2.isSelected()==true)
+	    {
+		gender=jRadioButton2.getText();
+	    }
+	else
+	    {
+		JOptionPane.showMessageDialog(null, "please select gender");
+		
+	    }
+	Dbcondb =newDbcon();
+	try {
+			db.toDatabase(num,name,emailid, dob,address,dateofreg,gender,password,jComboBox1.getSelectedItem().toString());
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}
+
