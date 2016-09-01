@@ -93,7 +93,7 @@ public class Dbcon {
 		int i=stmt.executeUpdate(query);
 		if(i>0)
 		{
-			JOptionPane.showMessageDialog(null, "Registration Successfull");
+			JOptionPane.showMessageDialog(null, "Registration Successful");
 			
 			
 			String mess="Your login credentils are "+password+""; 
@@ -201,7 +201,7 @@ public class Dbcon {
 		if(i>0)
 		{
 			
-			JOptionPane.showMessageDialog(null, "Registration Successfull");
+			JOptionPane.showMessageDialog(null, "Registration Successful");
 			
 		}
 		else
